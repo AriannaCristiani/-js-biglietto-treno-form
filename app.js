@@ -1,16 +1,16 @@
 
 //chiedere all'utente il suo nome ed il suo cognome
-const userNameSurname = document.getElementsByClassName('name-surname');
-console.log(userNameSurname)
+const userNameSurname = document.getElementById ('name-surname');
+//console.log(userNameSurname)
 
 
 //chiedere all'utente la sua età
-const age = document.getElementsByClassName('age');
-console.log(age);
+const age = document.getElementById ('age');
+//console.log(age);
 
 //chiedere all'utente il numero di km da percorrere
-const km = document.getElementsByClassName('km');
-console.log(km)
+const km = document.getElementById ('km');
+//console.log(km)
 
 
 //se l'utente inoltra dati non validi
@@ -19,20 +19,23 @@ const dataIsBiggerThanZero = km >= 0 && age >= 0
 
 //impedire alla pagina di inviare i dati
 const formElement = document.getElementById('form-element');
-console.log(formElement);
+//console.log(formElement);
 
 formElement.addEventListener('submit', function (event) {
     event.preventDefault();
+
+    console.log(userNameSurname.value)
+    console.log(km.value)
+    console.log(age.value)
+
+
 })
 
 
 const buttonSubmit = document.getElementById('button-submit');
-console.log(buttonSubmit)
+//console.log(buttonSubmit)
 
 
-buttonSubmit.addEventListener('click', function () {
-    console.log(age, km, userNameSurname)
-})
 
 //calcolare prezzo biglietto:
 if (dataIsValid && dataIsBiggerThanZero) {
