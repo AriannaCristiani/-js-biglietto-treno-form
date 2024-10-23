@@ -12,7 +12,7 @@
 <body class="bg-success">
 
     <div class="container">
-        <h1 class="p-5 color-dark text-center">Calcola qui il prezzo del tuo biglietto</h1>
+        <h1 class="p-3 color-dark text-center">Calcola qui il prezzo del tuo biglietto</h1>
     </div>
 
     <section class="mt-5">
@@ -20,34 +20,71 @@
             <form id="form-element" class="row gx-3 gy-2 justify-content-center">
                 <div class="col-sm-3">
                     <label class="visually-hidden" for="name-surname"></label>
-                    <input type="text" class="form-control" id="name-surname"
-                        placeholder="Nome e Cognome">
+                    <input type="text" class="form-control" id="name-surname" placeholder="Nome e Cognome">
                 </div>
                 <div class="col-sm-3">
                     <label class="visually-hidden" for="km"></label>
-                    <input type="text" class="form-control" id="km"
-                        placeholder="km da percorrere">
+                    <input type="text" class="form-control" id="km" placeholder="km da percorrere">
                 </div>
 
                 <div class="col-sm-3">
                     <label class="visually-hidden" for="age"></label>
                     <select class="form-select" id="age">
-                        <option selected>Scegli...</option>
-                        <option value="sotto i 18 anni">sotto i 18 anni </option>
-                        <option value="sopra i 65 anni">sopra i 65 anni</option>
-                        <option value="tra i 18 e i 65 anni">tra i 18 e i 65 anni</option>
+                        <option selected value="" disabled>Scegli...</option>
+                        <option value="under18">sotto i 18 anni </option>
+                        <option value="over65">sopra i 65 anni</option>
+                        <option value="other">tra i 18 e i 65 anni</option>
                     </select>
                 </div>
                 <div class="row gx-3 gy-2 justify-content-center">
                     <div class="col-auto">
                         <button type="submit" id="button-submit" class="btn  bg-light ">Genera</button>
                     </div>
-                    <div class="col-auto">
+                    <!-- <div class="col-auto">
                         <button type="submit" class="btn  bg-light">Annulla</button>
-                    </div>
+                    </div> -->
                 </div>
             </form>
+
+            <div class="container">
+                <h1 class="p-3 color-dark text-center">Il tuo biglietto</h1>
+            </div>
         </div>
+    </section>
+    <section>
+        <div class="container-lg text-center bg-light">
+            <div class="row ">
+                <div class="col-12">
+                    <h4>Nome passeggero</h4>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div class="container-lg text-center bg-light">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+
+                <div class="col">
+                    <strong>Offerta</strong>
+                    <p></p>
+                </div>
+                <div class="col">
+                    <strong>Carrozza</strong>
+                    <p></p>
+
+                </div>
+                <div class="col">
+                    <strong>Codice IP</strong>
+                    <p></p>
+
+                </div>
+                <div class="col">
+                    <strong>Costo biglietto</strong>
+                    <p></p>
+
+                </div>
+            </div>
+        </div>
+
     </section>
 
 

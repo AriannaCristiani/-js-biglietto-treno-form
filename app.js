@@ -25,23 +25,23 @@ formElement.addEventListener('submit', function (event) {
     console.log(userNameSurname.value)
 
     const ageValue = age.value
-    //console.log(ageValue)
-    const kmValue = km.value
-    //console.log(kmValue)
+    console.log(ageValue)
+    const kmValue = parseInt(km.value)
+    console.log(kmValue)
 
-    const dataIsValid = !isNaN(kmValue) && !isNaN(ageValue)
-    const dataIsBiggerThanZero = kmValue >= 0 && ageValue >= 0
+    const dataIsValid = !isNaN(kmValue)
+    const dataIsBiggerThanZero = kmValue >= 0 
 
 
     if (dataIsValid && dataIsBiggerThanZero) {
         const basePrice = kmValue * 0.21
-        console.log('prezzo base', basePrice.valueOf)
+        console.log('prezzo base', basePrice)
 
         let discountPercentage
 
-        if (ageValue < 18) {
+        if (ageValue === 'under18') {
             discountPercentage = 20
-        } else if (ageValue > 65) {
+        } else if (ageValue === 'over65') {
             discountPercentage = 40
         } else {
             discountPercentage = 0
@@ -49,7 +49,7 @@ formElement.addEventListener('submit', function (event) {
 
         console.log('Percentuale sconto: ', discountPercentage)
         const discount = (basePrice * discountPercentage) / 100
-        console.log('sconto: ', discount.valueOf)
+        console.log('sconto: ', discount)
 
         const price = basePrice - discount
 
@@ -61,7 +61,7 @@ formElement.addEventListener('submit', function (event) {
 
         const humanPrice = price.toFixed(2)
 
-        console.log('prezzo: ', humanPrice.value + ' €')
+        console.log('prezzo: ', humanPrice + ' €')
     } else {
         // alert('I dati inseriti non solo validi')
     }
