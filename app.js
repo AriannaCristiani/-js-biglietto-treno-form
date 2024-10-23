@@ -67,8 +67,12 @@ formElement.addEventListener('submit', function (event) {
     }
 
 
+
+
     const userName = document.getElementById('user-name')
     //console.log(userName)
+
+    userName.innerHTML = `<p id="user-name"><strong>${userNameSurname.value}</strong></li>`;
 
     const OnSalePrice = document.getElementById('sale')
     //console.log(OnSalePrice)
