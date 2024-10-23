@@ -11,42 +11,44 @@
 
 <body class="bg-success">
 
-   <div class="container">
-    <h1 class="p-5 color-dark text-center">Calcola qui il prezzo del tuo biglietto</h1>
-   </div>
+    <div class="container">
+        <h1 class="p-5 color-dark text-center">Calcola qui il prezzo del tuo biglietto</h1>
+    </div>
 
     <section class="mt-5">
         <div class="container">
-    <form class="row gx-3 gy-2 justify-content-center">
-        <div class="col-sm-3">
-            <label class="visually-hidden" for="specificSizeInputName"></label>
-            <input type="text" class="form-control name-surname " id="specificSizeInputName" placeholder="Nome e Cognome">
+            <form id="form-element" class="row gx-3 gy-2 justify-content-center">
+                <div class="col-sm-3">
+                    <label class="visually-hidden" for="specificSizeInputName"></label>
+                    <input type="text" class="form-control name-surname " id="specificSizeInputName"
+                        placeholder="Nome e Cognome">
+                </div>
+                <div class="col-sm-3">
+                    <label class="visually-hidden" for="specificSizeInputName"></label>
+                    <input type="text" class="form-control km" id="specificSizeInputName"
+                        placeholder="km da percorrere">
+                </div>
+
+                <div class="col-sm-3">
+                    <label class="visually-hidden" for="specificSizeSelect"></label>
+                    <select class="form-select age" id="specificSizeSelect">
+                        <option selected>Scegli...</option>
+                        <option value="1">sotto i 18 anni </option>
+                        <option value="2">sopra i 65 anni</option>
+                        <option value="3">tra i 18 e i 65 anni</option>
+                    </select>
+                </div>
+                <div class="row gx-3 gy-2 justify-content-center">
+                    <div class="col-auto">
+                        <button type="submit" id="button-submit" class="btn  bg-light ">Genera</button>
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn  bg-light">Annulla</button>
+                    </div>
+                </div>
+            </form>
         </div>
-        <div class="col-sm-3">
-            <label class="visually-hidden" for="specificSizeInputName"></label>
-            <input type="text" class="form-control km" id="specificSizeInputName"  placeholder="km da percorrere">
-        </div>
-       
-        <div class="col-sm-3">
-            <label class="visually-hidden" for="specificSizeSelect"></label>
-            <select class="form-select age" id="specificSizeSelect">
-                <option selected>Scegli...</option>
-                <option value="1">sotto i 18 anni </option>
-                <option value="2">sopra i 65 anni</option>
-                <option value="3">tra i 18 e i 65 anni</option>
-            </select>
-        </div>
-        <div class="row gx-3 gy-2 justify-content-center">
-        <div class="col-auto">
-            <button type="submit" class="btn  bg-light ">Genera</button>
-        </div>
-        <div class="col-auto">
-            <button type="submit" class="btn  bg-light">Annulla</button>
-        </div>
-    </div>
-    </form>
-</div>
-</section>
+    </section>
 
 
 
