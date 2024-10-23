@@ -14,7 +14,6 @@ const km = document.getElementById('km');
 
 
 
-
 //impedire alla pagina di inviare i dati
 const formElement = document.getElementById('form-element');
 //console.log(formElement);
@@ -40,11 +39,11 @@ formElement.addEventListener('submit', function (event) {
         let discountPercentage
 
         if (ageValue === 'under18') {
-            discountPercentage = 'Offerta del 20%'
+            discountPercentage = 20 
         } else if (ageValue === 'over65') {
-            discountPercentage = 'Offerta del 40%'
+            discountPercentage = 40
         } else {
-            discountPercentage = 'Biglietto standard'
+            discountPercentage = 0
         }
 
         console.log('Percentuale sconto: ', discountPercentage)
@@ -63,6 +62,10 @@ formElement.addEventListener('submit', function (event) {
 
         console.log('prezzo: ', humanPrice + ' €')
 
+
+
+
+
         const userName = document.getElementById('user-name')
         //console.log(userName)
     
@@ -75,12 +78,18 @@ formElement.addEventListener('submit', function (event) {
     
         const carriage = document.getElementById('carriage')
         //console.log(carriage)
+
+        //carriage.innerHTML = `<p id="carriage">${}</p>`;
     
         const ipCode = document.getElementById('ip-code')
         //console.log(ipCode)
+
+        //ipCode.innerHTML = `<p id="ip-code">${}</p>`;
     
-        const finalTicketPrice = document.getElementById('final-ticket-price')
+        const finalTicketPrice = document.getElementById('ticket-final-price')
         //console.log(finalTicketPrice)
+
+        finalTicketPrice.innerHTML = `<p id="ticket-final-price">${humanPrice}</p>`;
     
     } else {
         // alert('I dati inseriti non solo validi')
