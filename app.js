@@ -65,11 +65,28 @@ formElement.addEventListener('submit', function (event) {
     } else {
         // alert('I dati inseriti non solo validi')
     }
+
+
+    const userName = document.getElementById('user-name')
+    //console.log(userName)
+
+    const OnSalePrice = document.getElementById('sale')
+    //console.log(OnSalePrice)
+
+    const carriage = document.getElementById('carriage')
+    //console.log(carriage)
+
+    const ipCode = document.getElementById('ip-code')
+    //console.log(ipCode)
+
+    const finalTicketPrice = document.getElementById('final-ticket-price')
+    //console.log(finalTicketPrice)
+
+
 })
 
 
-const buttonSubmit = document.getElementById('button-submit');
-//console.log(buttonSubmit)
+
 
 
 
