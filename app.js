@@ -40,11 +40,11 @@ formElement.addEventListener('submit', function (event) {
         let discountPercentage
 
         if (ageValue === 'under18') {
-            discountPercentage = 20
+            discountPercentage = 'Offerta del 20%'
         } else if (ageValue === 'over65') {
-            discountPercentage = 40
+            discountPercentage = 'Offerta del 40%'
         } else {
-            discountPercentage = 0
+            discountPercentage = 'Biglietto standard'
         }
 
         console.log('Percentuale sconto: ', discountPercentage)
@@ -62,6 +62,26 @@ formElement.addEventListener('submit', function (event) {
         const humanPrice = price.toFixed(2)
 
         console.log('prezzo: ', humanPrice + ' €')
+
+        const userName = document.getElementById('user-name')
+        //console.log(userName)
+    
+        userName.innerHTML = `<p id="user-name"><strong>${userNameSurname.value}</strong></li>`;
+    
+        const OnSalePrice = document.getElementById('sale')
+        //console.log(OnSalePrice)
+        
+        OnSalePrice.innerHTML = `<p id="sale">${discountPercentage}</p>`;
+    
+        const carriage = document.getElementById('carriage')
+        //console.log(carriage)
+    
+        const ipCode = document.getElementById('ip-code')
+        //console.log(ipCode)
+    
+        const finalTicketPrice = document.getElementById('final-ticket-price')
+        //console.log(finalTicketPrice)
+    
     } else {
         // alert('I dati inseriti non solo validi')
     }
@@ -69,23 +89,7 @@ formElement.addEventListener('submit', function (event) {
 
 
 
-    const userName = document.getElementById('user-name')
-    //console.log(userName)
-
-    userName.innerHTML = `<p id="user-name"><strong>${userNameSurname.value}</strong></li>`;
-
-    const OnSalePrice = document.getElementById('sale')
-    //console.log(OnSalePrice)
-
-    const carriage = document.getElementById('carriage')
-    //console.log(carriage)
-
-    const ipCode = document.getElementById('ip-code')
-    //console.log(ipCode)
-
-    const finalTicketPrice = document.getElementById('final-ticket-price')
-    //console.log(finalTicketPrice)
-
+   
 
 })
 
