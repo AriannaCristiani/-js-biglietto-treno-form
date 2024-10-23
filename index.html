@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biglietto del Treno-FORM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body class="bg-success">
+
+   <div class="container">
+    <h1 class="p-5 color-dark text-center">Calcola qui il prezzo del tuo biglietto</h1>
+   </div>
+
+    <section class="mt-5">
+        <div class="container">
+    <form class="row gx-3 gy-2 justify-content-center">
+        <div class="col-sm-3">
+            <label class="visually-hidden" for="specificSizeInputName"></label>
+            <input type="text" class="form-control name-surname " id="specificSizeInputName" placeholder="Nome e Cognome">
+        </div>
+        <div class="col-sm-3">
+            <label class="visually-hidden" for="specificSizeInputName"></label>
+            <input type="text" class="form-control km" id="specificSizeInputName"  placeholder="km da percorrere">
+        </div>
+       
+        <div class="col-sm-3">
+            <label class="visually-hidden" for="specificSizeSelect"></label>
+            <select class="form-select age" id="specificSizeSelect">
+                <option selected>Scegli...</option>
+                <option value="1">sotto i 18 anni </option>
+                <option value="2">sopra i 65 anni</option>
+                <option value="3">tra i 18 e i 65 anni</option>
+            </select>
+        </div>
+        <div class="row gx-3 gy-2 justify-content-center">
+        <div class="col-auto">
+            <button type="submit" class="btn  bg-light ">Genera</button>
+        </div>
+        <div class="col-auto">
+            <button type="submit" class="btn  bg-light">Annulla</button>
+        </div>
+    </div>
+    </form>
+</div>
+</section>
+
+
+
+
+
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
